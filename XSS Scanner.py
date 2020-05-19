@@ -1,5 +1,4 @@
 import requests
-from pprint import pprint
 from bs4  import BeautifulSoup as bs
 from urllib.parse import urljoin
 
@@ -60,5 +59,8 @@ def scan_xss(url):
             is_vulnerable = True
             # won't break because we want to print available vulnerable forms
     return is_vulnerable     
+if "__name__"=="__main":
+    url = "https://www.xyz.com"
+    scan_xss(url)
 
 
